@@ -1,0 +1,32 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create Enrolments table for M:M resolution
+
+Added Enrolments table:
+
+Enrolments Table Structure:
+- EnrolmentID INT IDENTITY(1,1) PRIMARY KEY
+- ParticipantID INT NOT NULL FOREIGN KEY (Participants)
+- CategoryID INT NOT NULL FOREIGN KEY (Categories)
+- EnrolmentDate DATETIME DEFAULT GETDATE()
+- Status NVARCHAR(20) DEFAULT 'Confirmed'
+
+Constraints:
+- FOREIGN KEY ParticipantID REFERENCES Participants
+- FOREIGN KEY CategoryID REFERENCES Categories
+- UNIQUE (ParticipantID, CategoryID) - prevents duplicate enrolments
+- CHECK Status IN ('Confirmed', 'Cancelled')
+
+Indexes:
+- IX_Enrolments_ParticipantID for performance
+- IX_Enrolments_CategoryID for performance
+
+Design decisions:
+- Resolves M:M relationship between Participants and Categories
+- Stores enrolment-specific data (date, status)
+- UNIQUE constraint prevents duplicate enrolments
+- Enables withdrawal by setting Status to 'Cancelled'
+- Natural anchor for Results table
+
+This is the fifth table in the schema.
+
+This is commit #16 of 20."
