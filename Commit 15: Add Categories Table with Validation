@@ -1,0 +1,31 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create Categories table with business constraints
+
+Added Categories table:
+
+Categories Table Structure:
+- CategoryID INT IDENTITY(1,1) PRIMARY KEY
+- EventID INT NOT NULL FOREIGN KEY (Events)
+- CategoryName NVARCHAR(100) NOT NULL
+- Distance DECIMAL(6,2) NOT NULL
+- MaxParticipants INT NOT NULL DEFAULT 100
+- Price DECIMAL(8,2) NOT NULL DEFAULT 0
+
+Constraints:
+- FOREIGN KEY EventID REFERENCES Events
+- CHECK Distance > 0
+- CHECK MaxParticipants > 0
+
+Index:
+- IX_Categories_EventID for performance
+
+Design decisions:
+- Categories separate from Events (one event can have many)
+- Distance in km with 2 decimal places for precision
+- MaxParticipants defaults to 100 for safety
+- Price defaults to 0 for free events
+- CHECK constraints prevent invalid data
+
+This completes the categories table for Section C.
+
+This is commit #15 of 20."
