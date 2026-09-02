@@ -1,0 +1,28 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create RaceDayDB and Organisers table
+
+Added SQL script with:
+
+1. Database creation:
+   - IF DB_ID('RaceDayDB') check for clean recreation
+   - ALTER DATABASE to SINGLE_USER for drop
+   - CREATE DATABASE RaceDayDB
+   - USE RaceDayDB
+
+2. Organisers table:
+   - OrganiserID INT IDENTITY(1,1) PRIMARY KEY
+   - FullName NVARCHAR(100) NOT NULL
+   - Email NVARCHAR(150) NOT NULL UNIQUE
+   - PasswordHash NVARCHAR(255) NOT NULL
+   - PhoneNumber NVARCHAR(20) NULL
+   - CreatedAt DATETIME DEFAULT GETDATE()
+
+Design decisions:
+- Separate table for Organisers (not generic Users)
+- Email UNIQUE for login and duplicate prevention
+- PasswordHash never stores plain text
+- CreatedAt auto-filled with GETDATE()
+
+This is the first table in the schema.
+
+This is commit #12 of 20."
