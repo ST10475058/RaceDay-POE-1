@@ -1,0 +1,18 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: include database normalization justification
+
+Documented normalization to Third Normal Form (3NF):
+- Single-column surrogate primary keys satisfy 1NF and 2NF
+- No transitive dependencies between non-key attributes
+- Events uses OrganiserID FK instead of storing Organiser details
+- Categories uses EventID FK instead of storing Event details
+- Enrolments resolves M:M relationship properly
+
+Explained why Results stores RecordedByOrganiserID:
+- Not a normalization violation
+- Answers a different question (who captured the result)
+- Neither attribute can be derived from the other
+
+This demonstrates understanding of database design principles.
+
+This is commit #6 of 20."
