@@ -1,0 +1,27 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: complete API planning with results endpoints
+
+Added results endpoint specifications:
+
+Results (All Roles):
+- POST /api/enrolments/{enrolmentId}/results - Organiser record
+- GET /api/results/me - Participant view own results
+- GET /api/events/{eventId}/results - Public view event results
+
+Request/Response details:
+- Record: { finishTime, position }
+- Response: 201 Created with result object
+- Error: 409 Conflict if result already exists
+- Error: 404 Not Found if enrolment doesn't exist
+
+Completed all 21 API endpoints in comprehensive table:
+- Authentication: 2 endpoints
+- User Profile: 2 endpoints
+- Events: 5 endpoints
+- Categories: 4 endpoints
+- Enrolments: 3 endpoints
+- Results: 3 endpoints
+
+This completes Section B of Part 1.
+
+This is commit #11 of 20."
