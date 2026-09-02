@@ -1,0 +1,60 @@
+name: Validate Repository Structure
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check docs folder exists
+      run: |
+        if [ ! -d "docs" ]; then
+          echo "Error: docs folder not found!"
+          exit 1
+        fi
+        echo "✅ docs folder exists"
+    
+    - name: Check ERD image exists
+      run: |
+        if ! ls docs/*.png docs/*.pdf 2>/dev/null; then
+          echo "Error: No ERD image found in docs folder!"
+          exit 1
+        fi
+        echo "✅ ERD image found"
+    
+    - name: Check SQL script exists
+      run: |
+        if ! ls docs/*.sql 2>/dev/null; then
+          echo "Error: No SQL script found in docs folder!"
+          exit 1
+        fi
+        echo "✅ SQL script found"
+    
+    - name: Check documentation exists
+      run: |
+        if ! ls docs/*.pdf 2>/dev/null; then
+          echo "Error: No documentation found in docs folder!"
+          exit 1
+        fi
+        echo "✅ Documentation found"
+    
+    - name: Validate SQL script syntax
+      run: |
+        if grep -q "CREATE TABLE" docs/*.sql; then
+          echo "✅ SQL script contains CREATE TABLE statements"
+        else
+          echo "Error: SQL script missing CREATE TABLE statements!"
+          exit 1
+        fi
+    
+    - name: All checks passed
+      run: |
+        echo "🎉 All validation checks passed!"
+        echo "✅ Repository structure is valid for Part 1"
