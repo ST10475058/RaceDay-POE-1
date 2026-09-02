@@ -1,0 +1,20 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: document database relationships and cardinality
+
+Added relationship-by-relationship reasoning:
+- Organisers → Events (1:M) - One organiser creates many events
+- Events → Categories (1:M) - One event has many categories
+- Participants → Enrolments (1:M) - One participant makes many enrolments
+- Categories → Enrolments (1:M) - One category receives many enrolments
+- Enrolments → Results (1:1) - Each enrolment has one result
+- Organisers → Results (1:M) - One organiser captures many results
+
+Included relationship summary table with:
+- Cardinality for every relationship
+- Foreign key locations
+- Business rule explanations
+
+This fulfills the relationship documentation
+required for Section A of the ERD.
+
+This is commit #5 of 20."
