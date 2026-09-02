@@ -1,0 +1,27 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: plan event CRUD endpoints with role-based access
+
+Added event management endpoint specifications:
+
+Public (No Login Required):
+- GET /api/events - List all events
+- GET /api/events/{id} - View single event details
+
+Organiser Only:
+- POST /api/events - Create new event
+- PUT /api/events/{id} - Update owned event
+- DELETE /api/events/{id} - Delete owned event
+
+Request/Response details:
+- Create: { eventName, eventType, eventDate, location, description }
+- Update: Same fields as create (all optional)
+- Delete: No request body, returns 204 No Content
+
+Error handling:
+- 403 Forbidden when not the event owner
+- 404 Not Found when event doesn't exist
+- 400 Bad Request for validation errors
+
+This continues the API endpoint plan for Section B.
+
+This is commit #9 of 20."
