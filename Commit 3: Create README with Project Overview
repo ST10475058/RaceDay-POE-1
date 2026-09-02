@@ -1,0 +1,16 @@
+git add README.md
+git commit -m "docs: create README with project overview and structure
+
+Added comprehensive README covering:
+- System overview for RaceDay event management platform
+- Two user roles: Organiser and Participant
+- Part 1 deliverables overview
+- Project structure with docs/ folder
+- Setup instructions for SQL Server
+- CI/CD pipeline information
+- Video presentation requirements
+
+The README serves as the main entry point for
+anyone reviewing the project.
+
+This is commit #3 of 20."
