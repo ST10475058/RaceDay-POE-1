@@ -1,0 +1,32 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create Results table with 1:1 relationship
+
+Added Results table:
+
+Results Table Structure:
+- ResultID INT IDENTITY(1,1) PRIMARY KEY
+- EnrolmentID INT NOT NULL UNIQUE FOREIGN KEY (Enrolments)
+- RecordedByOrganiserID INT NOT NULL FOREIGN KEY (Organisers)
+- FinishTime TIME NOT NULL
+- Position INT NULL
+- RecordedAt DATETIME DEFAULT GETDATE()
+
+Constraints:
+- FOREIGN KEY EnrolmentID REFERENCES Enrolments
+- UNIQUE EnrolmentID (enforces 1:1 relationship)
+- FOREIGN KEY RecordedByOrganiserID REFERENCES Organisers
+- CHECK Position IS NULL OR Position > 0
+
+Index:
+- IX_Results_RecordedByOrganiserID for auditing
+
+Design decisions:
+- EnrolmentID UNIQUE ensures one result per enrolment
+- FinishTime stores actual race completion time
+- Position allows null (not yet ranked) with check >0
+- RecordedByOrganiserID for audit trail
+- RecordedAt captures when result was entered
+
+This completes the sixth and final table.
+
+This is commit #17 of 20."
