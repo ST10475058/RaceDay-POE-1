@@ -1,0 +1,11 @@
+git init
+git add .
+git commit -m "chore: initialize repository with project structure
+
+- Create root directory structure for RaceDay POE
+- Add docs/ folder for all planning documentation
+- Set up initial README.md template
+- Create .gitignore for binary and IDE files
+
+Part 1 requires a minimum of 20 meaningful commits.
+This is commit #1 of 20."
