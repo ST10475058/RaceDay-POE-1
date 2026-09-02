@@ -1,0 +1,30 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create Events table with foreign key and constraints
+
+Added Events table:
+
+Events Table Structure:
+- EventID INT IDENTITY(1,1) PRIMARY KEY
+- OrganiserID INT NOT NULL FOREIGN KEY (Organisers)
+- EventName NVARCHAR(150) NOT NULL
+- EventType NVARCHAR(50) NOT NULL
+- EventDate DATETIME NOT NULL
+- Location NVARCHAR(150) NOT NULL
+- Description NVARCHAR(1000) NULL
+- CreatedAt DATETIME DEFAULT GETDATE()
+
+Constraints:
+- CHECK EventType IN ('Running', 'Walking', 'Cycling')
+- FOREIGN KEY OrganiserID REFERENCES Organisers
+
+Index:
+- IX_Events_OrganiserID for performance on joins
+
+Design decisions:
+- EventType limited to three valid values
+- Description optional for event details
+- Location stores town/venue for browsing
+
+This establishes the parent table for categories.
+
+This is commit #14 of 20."
