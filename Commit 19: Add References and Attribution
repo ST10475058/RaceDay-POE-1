@@ -1,0 +1,31 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: add references and attribution section
+
+Added comprehensive references:
+
+Official Documentation:
+- Microsoft Learn: CREATE TABLE (Transact-SQL)
+- Microsoft Learn: SQL Server Data Types
+- Microsoft Learn: RESTful web API design
+- MDN: HTTP response status codes
+
+Books:
+- Fowler, M. Patterns of Enterprise Application Architecture
+  (Reference for associative-entity pattern)
+
+Educational:
+- Rosebank College: RaceDay POE assignment brief, 2026
+
+AI Assistance:
+- Anthropic: Claude (AI assistant)
+  Used for structuring and documentation
+  All design decisions reviewed by author
+
+Referencing Notes:
+- Consistent Harvard referencing style used
+- All sources cited in-text and in reference list
+- URLs accessed August 2026
+
+This meets the referencing requirements for the POE.
+
+This is commit #19 of 20."
