@@ -1,0 +1,24 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: design category and enrolment management endpoints
+
+Added category and enrolment endpoint specifications:
+
+Categories (Public + Organiser):
+- GET /api/events/{eventId}/categories - Public list
+- POST /api/events/{eventId}/categories - Organiser add
+- PUT /api/categories/{id} - Organiser update
+- DELETE /api/categories/{id} - Organiser delete
+
+Enrolments (Participant + Organiser):
+- POST /api/categories/{categoryId}/enrolments - Participant enrol
+- GET /api/enrolments/me - Participant view own enrolments
+- GET /api/events/{eventId}/enrolments - Organiser view all
+
+Key validation:
+- 409 Conflict when already enrolled
+- 400 Bad Request when category full
+- 403 Forbidden when not event owner
+
+This continues the API endpoint plan for Section B.
+
+This is commit #10 of 20."
