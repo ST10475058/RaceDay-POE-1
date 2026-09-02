@@ -1,0 +1,38 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): seed database with South African sample data
+
+Added comprehensive sample data:
+
+Organisers (2):
+- Sipho Ndlovu (sipho.ndlovu@raceday.co.za) - Vryheid events
+- Anke van der Merwe (anke.vdm@raceday.co.za) - Durban events
+
+Participants (2):
+- Thabo Mokoena (thabo.mokoena@example.com) - Born 1994
+- Lindiwe Zulu (lindiwe.zulu@example.com) - Born 1998
+
+Events (3):
+- Vryheid Community Fun Run (Running) - 2026-10-10
+- Vryheid Cycle Challenge (Cycling) - 2026-11-14
+- Durban Beachfront Park Walk (Walking) - 2026-09-20
+
+Categories (5):
+- 5km Fun Run (R80, 200 capacity)
+- 10km Race (R120, 150 capacity)
+- 40km Road Ride (R200, 100 capacity)
+- 80km Road Ride (R250, 80 capacity)
+- 3km Family Walk (Free, 300 capacity)
+
+Enrolments (4):
+- Thabo → 5km Fun Run (Confirmed)
+- Thabo → 40km Road Ride (Confirmed)
+- Lindiwe → 10km Race (Confirmed)
+- Lindiwe → 3km Family Walk (Confirmed)
+
+Results (2):
+- Enrolment 1: 00:28:14, Position 12
+- Enrolment 3: 00:52:03, Position 5
+
+Realistic South African events and pricing.
+
+This is commit #18 of 20."
