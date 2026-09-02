@@ -1,0 +1,23 @@
+git add docs/raceday_database.sql
+git commit -m "feat(database): create Participants table with age support
+
+Added Participants table:
+
+Participants Table Structure:
+- ParticipantID INT IDENTITY(1,1) PRIMARY KEY
+- FullName NVARCHAR(100) NOT NULL
+- Email NVARCHAR(150) NOT NULL UNIQUE
+- PasswordHash NVARCHAR(255) NOT NULL
+- DateOfBirth DATE NULL (for age-category checks)
+- PhoneNumber NVARCHAR(20) NULL
+- CreatedAt DATETIME DEFAULT GETDATE()
+
+Why separate from Organisers:
+- Participants need DateOfBirth for age eligibility
+- Different permissions in the system
+- Cleaner database with no NULL columns
+- Easier role-based access enforcement
+
+This fulfills the requirement for two user tables.
+
+This is commit #13 of 20."
