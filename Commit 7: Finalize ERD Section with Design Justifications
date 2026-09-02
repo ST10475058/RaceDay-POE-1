@@ -1,0 +1,28 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: complete ERD section with design justifications
+
+Added key design decision explanations:
+
+1. Why separate Organisers and Participants:
+   - Different attributes (Participants have DateOfBirth)
+   - Different permissions throughout the system
+   - Cleaner database design with no null columns
+
+2. Why separate Events and Categories:
+   - One event offers multiple categories
+   - Different prices, distances, capacities per category
+   - Reflects real South African event structure
+
+3. Why Enrolments as associative entity:
+   - Resolves M:M relationship
+   - Stores enrolment-specific data (date, status)
+   - Natural anchor for Results table
+
+4. Why Results linked to Enrolments:
+   - Result belongs to specific entry
+   - Links participant, category, and event
+   - Prevents duplicate results
+
+This completes Section A of Part 1.
+
+This is commit #7 of 20."
