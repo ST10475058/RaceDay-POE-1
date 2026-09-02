@@ -1,0 +1,16 @@
+git add .gitignore
+git commit -m "chore: add comprehensive .gitignore file
+
+Added patterns to exclude:
+- Binary document files (*.docx, *.doc, *.pdf)
+- IDE files (.vscode/, .idea/, *.swp, *.swo)
+- Database files (*.mdf, *.ldf, *.bak)
+- Python cache (__pycache__/, *.pyc)
+- Node.js modules (node_modules/)
+- Log files (*.log)
+- Temporary files (tmp/, temp/)
+
+This ensures only source code and documentation
+are committed to the repository.
+
+This is commit #2 of 20."
