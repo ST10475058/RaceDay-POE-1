@@ -1,0 +1,20 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: add ERD section with complete entity breakdown
+
+Added detailed documentation for all six entities:
+1. Organisers - Event organisers with OrganiserID PK
+2. Participants - Event participants with ParticipantID PK
+3. Events - Race-day events with EventID PK
+4. Categories - Entry options with CategoryID PK
+5. Enrolments - Associative entity with EnrolmentID PK
+6. Results - Finish records with ResultID PK
+
+Each entity includes:
+- Attribute names with SQL data types
+- Primary key and foreign key indicators
+- NOT NULL, UNIQUE, DEFAULT constraints
+- Business purpose and justification
+
+This fulfills the ERD requirements for Section A.
+
+This is commit #4 of 20."
