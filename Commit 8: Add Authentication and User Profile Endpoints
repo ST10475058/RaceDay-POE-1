@@ -1,0 +1,29 @@
+git add docs/RaceDay_POE_Part1_Tim.pdf
+git commit -m "docs: plan authentication and user profile endpoints
+
+Added endpoint specifications for:
+
+Authentication (Public):
+- POST /api/auth/register
+  Request: { fullName, email, password, role }
+  Response: 201 Created / 400 Bad Request
+
+- POST /api/auth/login
+  Request: { email, password }
+  Response: 200 OK with JWT / 401 Unauthorized
+
+User Profile (Authenticated):
+- GET /api/users/me
+  Response: 200 OK with user object
+
+- PUT /api/users/me
+  Request: { fullName, phoneNumber, dateOfBirth }
+  Response: 200 OK updated / 400 Bad Request
+
+Role-based access:
+- Public endpoints require no authentication
+- Profile endpoints require any logged-in user
+
+This begins the API endpoint plan for Section B.
+
+This is commit #8 of 20."
