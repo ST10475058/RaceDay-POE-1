@@ -43,7 +43,7 @@ The GitHub Actions workflow validates that the `/docs` folder exists and contain
 
 ## Video Walkthrough
 
-[Watch the video walkthrough here](https://youtu.be/your-video-link-here)
+[Watch the video walkthrough here](https://youtu.be/1qTQhwMbSwg?si=LP1Xn8mgsdf4Iad2)
 
 The video walks through the planning documents, explains the ERD decisions (Section A), covers the endpoint plan choices (Section B), and runs the SQL script live in SSMS (Section C). The voiceover is by the student (no AI-generated voices).
 
